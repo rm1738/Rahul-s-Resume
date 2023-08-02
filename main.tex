@@ -1,0 +1,221 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10.5pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Rahul A. Menon} \\ \vspace{1pt}
+    \small 917-991-8709 $|$ \href{mailto:x@x.com}{\underline{rahulmenon@vt.edu}} $|$ 
+    \href{https://linkedin.com/in/...}{\underline{https://www.linkedin.com/in/rahul-ajk-m}} 
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Virginia Tech $|$ \textbf{Blacksburg,VA} }{}
+          {\textbf{Bachelor of Science (B.S) in  Computer Engineering \&  Electrical Engineering (Double Major)} }{Exp.May 2024}
+           \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \item \textbf{\underline{Focus}}{: Controls, Robotics and Autonomy}
+      \item \textbf{\underline{Minor}}{: Computer Science}
+     \item \textbf{\underline{Key Coursework (CPE)}}{: Data Structures and Algorithms, Computer Organization and Architecture, Embedded Systems, A.I and Engineering Applications, Database Management Systems, Digital Image Processing, Machine Learning, Applied Software Design, Digital Systems}
+     \item   \textbf{\underline{Key Coursework (E.E)}}{: Circuits and Devices, Physical Electronics, Signals and Systems, AC Circuit Analysis, AC Circuit Analysis Laboratory, Continuous and Discrete System Theory, Probability and Statistics for Electrical Engineers, Introduction to Control Systems}
+     }
+     }
+     \end{itemize}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Software Developer Intern $|$ Siemens Digital}{June 2022 -- August 2022}
+      {Abu Dhabi, United Arab Emirates}{}
+      \resumeItemListStart
+        \resumeItem{Incorporated the use of Siemens' MindSphere API to provide Software Solutions to Industrial Customers }
+        \resumeItem{Practiced pulling more than 100,000+ operational data points for firms utilizing Python from MindSphere}
+        \resumeItem{ Formulated a Full-Stack Solution by creating Interactive Dashboards using Python for 4+ Clients helping them cut costs by \geq 10 \% }
+        
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+       {Security Engineering Intern $|$ Technomak}{May 2021 -- August 2021}
+      {Sharjah, United Arab Emirates}{}
+      \resumeItemListStart
+        \resumeItem{Provided comprehensive Cyber solutions through Cyber assessments and vulnerability mapping  to evaluate and recommend tool sets for best practice
+}
+        \resumeItem{Helped improve technology such as Non-intrusive platforms and integrations covering the integration between IT/OT networks
+}
+        \resumeItem{Enhanced knowledge on Process Control Network security including endpoint monitoring }
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Architect Intern $|$ Telinstra}{January 2020 -- April 2020}
+      {Dubai, United Arab Emirates}{}
+      \resumeItemListStart
+        \resumeItem{Identified efficiency issues in an existing code base improving run-time perfromance by 5\% }
+        \resumeItem{Utilzed JUnit and PyTest for Integration and testing}
+        \resumeItem{Helped Develop the Infrastructure for efficent Data Migration of Oil and Gas Control Systems}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Tamagotchi} $|$ \emph{C, MSP432P401R Micro-Controller, Code Composer Studio, Git}}{August 2021 -- December 2021}
+          \resumeItemListStart
+          \resumeItem{Designed a Virtual Pet on the MSP432P401R Micro Micro-Controller using the C programming language in Code Composer Studio}
+            \resumeItem{Crafted important functionality in the Hardware Abstraction Layer that allowed the Computer OS to interact with the Micro-controller}
+            \resumeItem{Implemented and committed more than 3,000+ lines of code to Git}
+            \resumeItem{Enabled users to play with the virtual pet and feed it by implementing the UART communication protocol with the PC as  the transmitter and the Micro- controller as the receiver}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Autonomous-Tractor} $|$ \emph{C, Python, Arduino, PyCharm,Git, Bleak}}{August 2021 -- December 2021}
+          \resumeItemListStart
+            \resumeItem{Interfaced the Arduino Uno using the C programming language with 4+ Sensors to allow the tractor to move autonomously}
+            \resumeItem{Implemented and tested the MPU6050 Gyroscope for course correction of the tractor with testing revealing greater than 90 \% accuracy  }
+            \resumeItem{Developed a Graphical User Interface Utilizing the PyGame Library}
+            \resumeItem{Connected the Tractor and the GUI through the Bleak Library in Python which helps in sending and receiving data via Bluetooth Low Energy (BLE) }
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: Java, Python, C/C++, SQL, MATLAB} \\
+     \textbf{Frameworks}{: Flask, JUnit, PyTest, UART Communications, I2C Communications} \\
+     \textbf{Developer Tools}{: Git, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse, MATLAB, Code Composer Studio, Intel Quartus, Arduino} \\
+      \textbf{Libraries}{: pandas, NumPy, Matplotlib, PyGame, PyGUI, Bleak}
+      \\
+     \textbf{Human Languages}{: English (Native), Hindi (Native)} 
+    }}
+ \end{itemize}
+%-------------------------------------------
+\end{document}
