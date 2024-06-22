@@ -1,221 +1,171 @@
-%-------------------------
 % Resume in Latex
 % Author : Jake Gutierrez
 % Based off of: https://github.com/sb2nov/resume
 % License : MIT
-%------------------------
 
-\documentclass[letterpaper,10.5pt]{article}
+\documentclass[letterpaper,11pt]{article}
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
+% Set fonts
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[left=0.2in,right=0.2in,top=0.2in,bottom=0.35in]{geometry}
+
+% Packages for formatting
 \usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\input{glyphtounicode}
-
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
+\usepackage{xcolor}
+\usepackage{hyperref}
 
 % Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\titleformat{\section}{\large\bfseries\scshape}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
 
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
-
-%-------------------------
 % Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspacAe{-2pt}}}
+\newcommand{\resumeSubheading}[4]{%
   \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\footnotesize#3} & \textit{\footnotesize#4} \\
+  \end{tabular*}\vspace{-7pt}
 }
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeProjectHeading}[2]{\item{\textbf{#1} \hfill \footnotesize#2}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
+% Document start
 \begin{document}
+\pagestyle{empty} % Add this line to remove page numbers
 
-%----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
+% Heading
 \begin{center}
-    \textbf{\Huge \scshape Rahul A. Menon} \\ \vspace{1pt}
-    \small 917-991-8709 $|$ \href{mailto:x@x.com}{\underline{rahulmenon@vt.edu}} $|$ 
-    \href{https://linkedin.com/in/...}{\underline{https://www.linkedin.com/in/rahul-ajk-m}} 
+    \Huge \scshape Rahul A. Menon \\
+    \small 917-991-8709 $|$ \href{mailto:rahulmenon@vt.edu}{\underline{rahulmenon@vt.edu}} $|$ 
+    \href{https://www.linkedin.com/in/rahul-ajk-m}{\underline{linkedin.com/in/rahul-ajk-m}} 
 \end{center}
 
+% Reduce space between sections manually
+\vspace{-\baselineskip} % Reduce by one line height
+\vspace{-0.5\baselineskip} % Reduce by half a line height
 
-%-----------EDUCATION-----------
+% Education section
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Virginia Tech $|$ \textbf{Blacksburg,VA} }{}
-          {\textbf{Bachelor of Science (B.S) in  Computer Engineering \&  Electrical Engineering (Double Major)} }{Exp.May 2024}
-           \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \item \textbf{\underline{Focus}}{: Controls, Robotics and Autonomy}
-      \item \textbf{\underline{Minor}}{: Computer Science}
-     \item \textbf{\underline{Key Coursework (CPE)}}{: Data Structures and Algorithms, Computer Organization and Architecture, Embedded Systems, A.I and Engineering Applications, Database Management Systems, Digital Image Processing, Machine Learning, Applied Software Design, Digital Systems}
-     \item   \textbf{\underline{Key Coursework (E.E)}}{: Circuits and Devices, Physical Electronics, Signals and Systems, AC Circuit Analysis, AC Circuit Analysis Laboratory, Continuous and Discrete System Theory, Probability and Statistics for Electrical Engineers, Introduction to Control Systems}
-     }
-     }
-     \end{itemize}
-  \resumeSubHeadingListEnd
+\begin{itemize}[leftmargin=0mm, label={}]
+  \item \textbf{Virginia Tech $|$ \textnormal{Blacksburg, VA}} \hfill {\textbf{May 2024}} \\
+  \textbf{Bachelor of Science (B.S) in Computer Engineering \& Electrical Engineering (Double Major)} \\
+  Focus: Controls, Robotics, Autonomy $|$ Minor: Computer Science
+\end{itemize}
+
+% Reduce space between sections manually
+\vspace{-1\baselineskip} % Reduce by one line height
+\vspace{-0.35\baselineskip} % Reduce by one line height
 
 
-%-----------EXPERIENCE-----------
+% Work experience section
 \section{Work Experience}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Software Developer Intern $|$ Siemens Digital}{June 2022 -- August 2022}
-      {Abu Dhabi, United Arab Emirates}{}
-      \resumeItemListStart
-        \resumeItem{Incorporated the use of Siemens' MindSphere API to provide Software Solutions to Industrial Customers }
-        \resumeItem{Practiced pulling more than 100,000+ operational data points for firms utilizing Python from MindSphere}
-        \resumeItem{ Formulated a Full-Stack Solution by creating Interactive Dashboards using Python for 4+ Clients helping them cut costs by \geq 10 \% }
-        
-      \resumeItemListEnd
-      
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
+\begin{itemize}[leftmargin=0mm, label={}, itemsep=0pt]
+  \item \vspace{-2pt} \textbf{Systems Integration Lead $|$ (Project Sponsor: BOEING \& NAVAIR)} \hfill {August 2023 -- May 2024} \\
+  \small Blacksburg, Virginia
+  \vspace{-0.30\baselineskip} % Reduce by half a line height
+  \begin{itemize}[leftmargin=5mm, itemsep=0pt, topsep=0pt]
+    \item \small Constructed, and rigorously tested an autonomous robot, securing 3rd position among 52 teams at IEEE SoutheastCon 2024, an IEEE flagship conference
+    \item \small Directed the integration of a system enabling the vehicle to autonomously start upon detection of a green light, achieving 99\% reliability
+    \item \small Managed design timelines \& Verification Testing, improving project efficiency by 15\% \& reducing costs by 10\%
+    \item \small 
+Developed and presented 3+ innovative design proposals and technical presentations at Virginia Tech and NAVAIR expos, featuring interactive Q\&A with judging committees
+    \item \small Compiled and presented in-depth weekly progress summaries to BOEING, NAVAIR, and Virginia Tech, detailing project milestones, potential risks, and implementation status, ensuring all teams remained informed and aligned with project goals
+  \end{itemize}
+  
+  \item \vspace{-2pt} \textbf{Software Developer Intern $|$ Siemens Digital} \hfill {June 2022 -- August 2022} \\
+  \small Abu Dhabi, United Arab Emirates
+   \vspace{-0.30\baselineskip} % Reduce by half a line height
+  \begin{itemize}[leftmargin=5mm, itemsep=0pt, topsep=0pt]
+    \item \small Orchestrated comprehensive software solutions using Siemens' MindSphere API, enabling real-time analysis
+    \item \small Engineered Python programs to pull and process over 100,000 data points from MindSphere cloud API, facilitating time series analysis for operational insights.
+    \item \small Devised full-stack Python solutions for industry clients, crafting interactive dashboards that enhance data visualization and support robust decision-making
+  \end{itemize}
+  
+  \item \vspace{-1.5pt} \textbf{Software Architect Intern $|$ Telinstra} \hfill {January 2020 -- May 2020} \\
+  \small Dubai, United Arab Emirates
+   \vspace{-0.30\baselineskip} % Reduce by half a line height
+  \begin{itemize}[leftmargin=5mm, itemsep=0pt, topsep=0pt]
+    \item \small Improved runtime performance by 5\% through resolving efficiency bottlenecks in the code base, focusing on algorithmic enhancements and streamlined resource utilization
+    \item \small Implemented JUnit and PyTest for integration testing,  pinpointing logic errors and edge-case bugs for enhanced system functionality
+    \item \small Formulated a robust infrastructure for seamless data migration of oil and gas control systems; decreased data transfer time and reduced errors
+  \end{itemize}
+\end{itemize}
 
-    \resumeSubheading
-       {Security Engineering Intern $|$ Technomak}{May 2021 -- August 2021}
-      {Sharjah, United Arab Emirates}{}
-      \resumeItemListStart
-        \resumeItem{Provided comprehensive Cyber solutions through Cyber assessments and vulnerability mapping  to evaluate and recommend tool sets for best practice
-}
-        \resumeItem{Helped improve technology such as Non-intrusive platforms and integrations covering the integration between IT/OT networks
-}
-        \resumeItem{Enhanced knowledge on Process Control Network security including endpoint monitoring }
-    \resumeItemListEnd
+% Reduce space between sections manually
+\vspace{-1\baselineskip} % Reduce by one line height
+\vspace{-0.4\baselineskip} % Reduce by half a line height
 
-    \resumeSubheading
-      {Software Architect Intern $|$ Telinstra}{January 2020 -- April 2020}
-      {Dubai, United Arab Emirates}{}
-      \resumeItemListStart
-        \resumeItem{Identified efficiency issues in an existing code base improving run-time perfromance by 5\% }
-        \resumeItem{Utilzed JUnit and PyTest for Integration and testing}
-        \resumeItem{Helped Develop the Infrastructure for efficent Data Migration of Oil and Gas Control Systems}
-      \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
-
-%-----------PROJECTS-----------
+% Projects section
 \section{Projects}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Tamagotchi} $|$ \emph{C, MSP432P401R Micro-Controller, Code Composer Studio, Git}}{August 2021 -- December 2021}
-          \resumeItemListStart
-          \resumeItem{Designed a Virtual Pet on the MSP432P401R Micro Micro-Controller using the C programming language in Code Composer Studio}
-            \resumeItem{Crafted important functionality in the Hardware Abstraction Layer that allowed the Computer OS to interact with the Micro-controller}
-            \resumeItem{Implemented and committed more than 3,000+ lines of code to Git}
-            \resumeItem{Enabled users to play with the virtual pet and feed it by implementing the UART communication protocol with the PC as  the transmitter and the Micro- controller as the receiver}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Autonomous-Tractor} $|$ \emph{C, Python, Arduino, PyCharm,Git, Bleak}}{August 2021 -- December 2021}
-          \resumeItemListStart
-            \resumeItem{Interfaced the Arduino Uno using the C programming language with 4+ Sensors to allow the tractor to move autonomously}
-            \resumeItem{Implemented and tested the MPU6050 Gyroscope for course correction of the tractor with testing revealing greater than 90 \% accuracy  }
-            \resumeItem{Developed a Graphical User Interface Utilizing the PyGame Library}
-            \resumeItem{Connected the Tractor and the GUI through the Bleak Library in Python which helps in sending and receiving data via Bluetooth Low Energy (BLE) }
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
+\begin{itemize}[leftmargin=0mm, label={}, itemsep=0pt]
+\item \href{https://github.com/rm1738/Indian_Plate_Recognition/blob/main/annotated-DIP_Final_Report_Rahul_Menon.pdf}{\textbf{Automated Recognition of Indian Vehicle Number Plates}} \hfill {October 2023 -- December 2023} \\
+\vspace{0\topsep} % Reduce the space between title and items by half of \topsep
+\vspace{-\partopsep} % Reduce additional space added above and below the list
+\vspace{-\baselineskip} % Reduce by one line height
+\begin{itemize}[leftmargin=5mm, itemsep=0pt, topsep=0pt, parsep=0pt, label={\textbullet}]
+  \item \small Innovated an ANPR system using Python and OpenCV, achieving a 95\% accuracy in extracting Indian vehicle registration numbers
+  \item \small Bolstered image preprocessing  that improved image clarity by 20\%, ensuring accurate detection
+\end{itemize}
+\vspace{-\parsep} % Reduce space between itemize environments
+\end{itemize}
+
+\vspace{-1\topsep} % Reduce the space between title and items by half of \topsep
+\vspace{-0.1\topsep} % Reduce the space between title and items by half of \topsep
 
 
+\begin{itemize}[leftmargin=0mm, label={}, itemsep=0pt]
+\item \href{https://github.com/rm1738/Autonomous_Tractor}{\textbf{Autonomous-Tractor}} \hfill {January 2023 -- May 2023} \\
+\vspace{0\topsep} % Reduce the space between title and items by half of \topsep
+\vspace{-\partopsep} % Reduce additional space added above and below the list
+\vspace{-\baselineskip} % Reduce by one line height
+\begin{itemize}[leftmargin=5mm, itemsep=0pt, topsep=0pt, parsep=0pt, label={\textbullet}]
+  \item \small  Constructed an autonomous tractor interfaced using an Arduino, 5+ sensors and an optimized MPU6050 Gyroscope for course correction and reliable navigational accuracy
+  \item \small Deployed a PyGame GUI using BLE (Bluetooth Low Energy) for real-time sensor data, boosting operational efficiency by 25\%
+\end{itemize}
+\vspace{-\parsep} % Reduce space between itemize environments
+\end{itemize}
 
-%
-%-----------PROGRAMMING SKILLS-----------
+\vspace{-0.5\topsep} % Reduce the space between title and items by half of \topsep
+
+\begin{itemize}[leftmargin=0mm, label={}, itemsep=0pt]
+\item \href{https://github.com/rm1738/Classifcation_of_Music_Genre/tree/main}{\textbf{Music Genre Classification Project}} \hfill {October 2022 -- December 2022} \\
+\vspace{0\topsep} % Reduce the space between title and items by half of \topsep
+\vspace{-\partopsep} % Reduce additional space added above and below the list
+\vspace{-\baselineskip} % Reduce by one line height
+\begin{itemize}[leftmargin=5mm, itemsep=0pt, topsep=0pt, parsep=0pt, label={\textbullet}]
+  \item \small Trained and tested K-Nearest Neighbors and SVM algorithms to classify music genres using the "GTZAN Dataset"
+  \item \small Created and fine-tuned Python scripts for data preprocessing and performance evaluation, achieving improvement in model accuracy and  reduction in processing time.
+\end{itemize}
+\vspace{-\parsep} % Reduce space between itemize environments
+\end{itemize}
+
+
+\begin{itemize}[leftmargin=0mm, label={}, itemsep=0pt]
+  \item \href{https://github.com/rm1738/Space-Invaders-/blob/main/proj2_main.c}{\textbf{Embedded Space Invaders Game Development}} \hfill {March 2021 -- April 2021} \\
+  \vspace{0\topsep} % Reduce the space between title and items by half of \topsep
+  \vspace{-\partopsep} % Reduce additional space added above and below the list
+  \vspace{-\baselineskip} % Reduce by one line height
+  \begin{itemize}[leftmargin=5mm, itemsep=0pt, topsep=0pt, parsep=0pt, label={\textbullet}]
+    \item Developed "Space Invaders" game using MSP432 microcontroller and joystick/button peripherals, showcasing advanced skills in embedded systems and game development
+    \item Engineered comprehensive player controls, enemy AI, and screen transitions using HAL libraries, ensuring smooth gameplay and user engagement
+  \end{itemize}
+  \vspace{-\parsep} % Reduce space between itemize environments
+\end{itemize}
+
+
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Programming Languages}{: Java, Python, C/C++, SQL, MATLAB} \\
-     \textbf{Frameworks}{: Flask, JUnit, PyTest, UART Communications, I2C Communications} \\
-     \textbf{Developer Tools}{: Git, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse, MATLAB, Code Composer Studio, Intel Quartus, Arduino} \\
-      \textbf{Libraries}{: pandas, NumPy, Matplotlib, PyGame, PyGUI, Bleak}
-      \\
-     \textbf{Human Languages}{: English (Native), Hindi (Native)} 
-    }}
- \end{itemize}
-%-------------------------------------------
+\begin{itemize}[leftmargin=0mm, label={}, itemsep=-3pt] % Adjust itemsep as needed
+  \small
+    \item \textbf{Programming Languages:} Java, Python, C/C++, SQL, MATLAB, MIPS Assembly
+    \item \textbf{Software Technologies:} Git Version Control, VS Code, PyCharm, IntelliJ, Eclipse, Code Composer Studio, , Arduino IDE
+    \item \textbf{Low-level Technologies:} Verilog, Assembly Programming (MIPS), Arduino, Raspberry Pi, Intel Quartus
+    \item \textbf{Libraries:} pandas, BLEAK, scikit-learn, Keras, Arduino Libraries, PyTorch, TensorFlow, PyGUI, Numpy
+\end{itemize}
+
+
 \end{document}
