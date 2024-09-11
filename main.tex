@@ -8,8 +8,9 @@
 % Set fonts
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
+\usepackage{fontawesome}
 
-\usepackage[left=0.2in,right=0.2in,top=0.2in,bottom=0.35in]{geometry}
+\usepackage[left=0.2in,right=0.2in,top=0.2in,bottom=0.2in]{geometry}
 
 % Packages for formatting
 \usepackage{titlesec}
@@ -19,17 +20,17 @@
 
 % Sections formatting
 \titleformat{\section}{\large\bfseries\scshape}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
-\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
+\titlespacing*{\section}{0pt}{0.5\baselineskip}{0.5\baselineskip} % Adjust spacing between sections
 
 % Custom commands
-\newcommand{\resumeItem}[1]{\item\small{#1 \vspacAe{-2pt}}}
 \newcommand{\resumeSubheading}[4]{%
   \vspace{-2pt}\item
   \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
-    \textit{\footnotesize#3} & \textit{\footnotesize#4} \\
+    \textit{\footnotesize#3} & \textit{\small#4} \\
   \end{tabular*}\vspace{-7pt}
 }
+
 \newcommand{\resumeProjectHeading}[2]{\item{\textbf{#1} \hfill \footnotesize#2}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
@@ -38,133 +39,107 @@
 \begin{document}
 \pagestyle{empty} % Add this line to remove page numbers
 
+
+
+
 % Heading
 \begin{center}
-    \Huge \scshape Rahul A. Menon \\
-    \small 917-991-8709 $|$ \href{mailto:rahulmenon@vt.edu}{\underline{rahulmenon@vt.edu}} $|$ 
-    \href{https://www.linkedin.com/in/rahul-ajk-m}{\underline{linkedin.com/in/rahul-ajk-m}} 
+    \Huge \scshape Rahul Menon \\
+    \small
+    \faPhone\ +1 (917)-991-8709 $|$ 
+    \faEnvelope\ \href{mailto:rahulmenon@vt.edu}{rahulmenon@vt.edu} $|$ 
+    \faGlobe\ \href{https://rmenon.netlify.app/}{Personal Website} $|$ 
+    \faLinkedinSquare\ \href{https://www.linkedin.com/in/rahul-ajk-m}{LinkedIn} $|$ 
+    \faGithub\ \href{https://github.com/rm1738}{Github}
 \end{center}
 
 % Reduce space between sections manually
-\vspace{-\baselineskip} % Reduce by one line height
-\vspace{-0.5\baselineskip} % Reduce by half a line height
+\vspace{-1.2\baselineskip} % Reduce by one line height
 
 % Education section
 \section{Education}
-\begin{itemize}[leftmargin=0mm, label={}]
+\begin{itemize}[leftmargin=0mm, label={}, itemsep=0pt]
   \item \textbf{Virginia Tech $|$ \textnormal{Blacksburg, VA}} \hfill {\textbf{May 2024}} \\
-  \textbf{Bachelor of Science (B.S) in Computer Engineering \& Electrical Engineering (Double Major)} \\
-  Focus: Controls, Robotics, Autonomy $|$ Minor: Computer Science
+  \textbf{Bachelor of Science  (B.S.) in Computer \& Electrical Engineering (Graduated with Double Major)} \\
+Focus: Controls, Robotics, Autonomy $|$ Minor: Computer Science
 \end{itemize}
 
 % Reduce space between sections manually
-\vspace{-1\baselineskip} % Reduce by one line height
-\vspace{-0.35\baselineskip} % Reduce by one line height
+\vspace{-0.75\baselineskip} % Reduce by one line height
 
 
-% Work experience section
+% Work Experience section
 \section{Work Experience}
-\begin{itemize}[leftmargin=0mm, label={}, itemsep=0pt]
-  \item \vspace{-2pt} \textbf{Systems Integration Lead $|$ (Project Sponsor: BOEING \& NAVAIR)} \hfill {August 2023 -- May 2024} \\
-  \small Blacksburg, Virginia
-  \vspace{-0.30\baselineskip} % Reduce by half a line height
-  \begin{itemize}[leftmargin=5mm, itemsep=0pt, topsep=0pt]
-    \item \small Constructed, and rigorously tested an autonomous robot, securing 3rd position among 52 teams at IEEE SoutheastCon 2024, an IEEE flagship conference
+\begin{itemize}[leftmargin=0mm, label={}, itemsep=1pt]  % Reduce itemsep for closer job entries
+
+  \item \textbf{\href{https://www.ranial.com}{Associate Solutions Engineer $|$ Ranial Systems}} \hfill \textit{\small August 2024 -- December 2024} \\
+  \small \textit{Contract • New York, New York} \vspace{-0.1\baselineskip}  % Reduced vertical space after the title
+  \begin{itemize}[leftmargin=5mm, itemsep=0pt, topsep=0pt]  % Reduce itemsep between bullet points
+    \item \small Pioneered a MODBUS to OCPP program using Java Maven, enabling efficient monitoring of EV chargers, enhancing management efficiency by 10--15\%
+    \item \small Presented AI and IoT-driven solutions to industrial clients, for optimizing chiller plants to reduce carbon emissions and maintenance overheads by 18\%
+    \item \small Engaged with clients and partners to drive business growth, increasing the company’s client profile by 20\%
+    \item \small Conducted R\&D on micro grid \& energy management projects, improving product performance by 10\%, helping clients achieve their KPIs more seamlessly 
+  \end{itemize}
+
+  \item \textbf{\href{https://www.youtube.com/watch?v=jMc0rQBXLdU}{Systems Integration Lead $|$ Project Sponsor: BOEING \& NAVAIR}} \hfill \textit{\small August 2023 -- May 2024} \\
+  \small \textit{Blacksburg, Virginia} \vspace{-0.1\baselineskip}  % Reduced vertical space after the title
+  \begin{itemize}[leftmargin=5mm, itemsep=0pt, topsep=0pt]  % Reduce itemsep between bullet points
+    \item \small Constructed and rigorously tested an autonomous robot using C++ and Python, securing 3rd position among 42 teams at IEEE SoutheastCon 2024
     \item \small Directed the integration of a system enabling the vehicle to autonomously start upon detection of a green light, achieving 99\% reliability
-    \item \small Managed design timelines \& Verification Testing, improving project efficiency by 15\% \& reducing costs by 10\%
-    \item \small 
-Developed and presented 3+ innovative design proposals and technical presentations at Virginia Tech and NAVAIR expos, featuring interactive Q\&A with judging committees
+    \item \small Managed design timelines and verification testing, including automated testing strategies, improving project efficiency and reducing costs by 12\%
+    \item \small Developed and presented 3+ innovative design proposals and technical presentations at Virginia Tech and NAVAIR expos, featuring interactive Q\&A with judging committees
     \item \small Compiled and presented in-depth weekly progress summaries to BOEING, NAVAIR, and Virginia Tech, detailing project milestones, potential risks, and implementation status, ensuring all teams remained informed and aligned with project goals
   \end{itemize}
-  
-  \item \vspace{-2pt} \textbf{Software Developer Intern $|$ Siemens Digital} \hfill {June 2022 -- August 2022} \\
-  \small Abu Dhabi, United Arab Emirates
-   \vspace{-0.30\baselineskip} % Reduce by half a line height
-  \begin{itemize}[leftmargin=5mm, itemsep=0pt, topsep=0pt]
+
+  \item \textbf{Software Developer Intern $|$ Siemens Digital Industries} \hfill \textit{\small June 2022 -- August 2022} \\
+  \small \textit{Abu Dhabi, United Arab Emirates} \vspace{-0.15\baselineskip} % Reduced space between job title and descriptions
+  \begin{itemize}[leftmargin=5mm, itemsep=0pt, topsep=0pt] % Adjusted itemsep for space between bullets
     \item \small Orchestrated comprehensive software solutions using Siemens' MindSphere API, enabling real-time analysis
-    \item \small Engineered Python programs to pull and process over 100,000 data points from MindSphere cloud API, facilitating time series analysis for operational insights.
-    \item \small Devised full-stack Python solutions for industry clients, crafting interactive dashboards that enhance data visualization and support robust decision-making
+    \item \small Engineered Python programs to pull and process over 100,000 data points from MindSphere cloud API, facilitating time series analysis for operational insights
+    \item \small Devised full-stack Python solutions for industry clients, crafting interactive dashboards that enhance data visualization for robust decision-making
   \end{itemize}
-  
-  \item \vspace{-1.5pt} \textbf{Software Architect Intern $|$ Telinstra} \hfill {January 2020 -- May 2020} \\
-  \small Dubai, United Arab Emirates
-   \vspace{-0.30\baselineskip} % Reduce by half a line height
-  \begin{itemize}[leftmargin=5mm, itemsep=0pt, topsep=0pt]
+
+  \item \textbf{Software Architect Intern $|$ Telinstra} \hfill \textit{\small January 2020 -- May 2020} \\
+  \small \textit{Dubai, United Arab Emirates} \vspace{-0.15\baselineskip} % Reduced space between job title and descriptions
+  \begin{itemize}[leftmargin=5mm, itemsep=0pt, topsep=0pt] % Adjusted itemsep for space between bullets
     \item \small Improved runtime performance by 5\% through resolving efficiency bottlenecks in the code base, focusing on algorithmic enhancements and streamlined resource utilization
-    \item \small Implemented JUnit and PyTest for integration testing,  pinpointing logic errors and edge-case bugs for enhanced system functionality
+    \item \small Implemented JUnit and PyTest for integration testing, pinpointing logic errors and edge-case bugs for enhanced system functionality
     \item \small Formulated a robust infrastructure for seamless data migration of oil and gas control systems; decreased data transfer time and reduced errors
   \end{itemize}
+
 \end{itemize}
 
 % Reduce space between sections manually
-\vspace{-1\baselineskip} % Reduce by one line height
-\vspace{-0.4\baselineskip} % Reduce by half a line height
+\vspace{-0.75\baselineskip} % Reduce by one line height
 
 % Projects section
 \section{Projects}
 \begin{itemize}[leftmargin=0mm, label={}, itemsep=0pt]
-\item \href{https://github.com/rm1738/Indian_Plate_Recognition/blob/main/annotated-DIP_Final_Report_Rahul_Menon.pdf}{\textbf{Automated Recognition of Indian Vehicle Number Plates}} \hfill {October 2023 -- December 2023} \\
-\vspace{0\topsep} % Reduce the space between title and items by half of \topsep
-\vspace{-\partopsep} % Reduce additional space added above and below the list
-\vspace{-\baselineskip} % Reduce by one line height
-\begin{itemize}[leftmargin=5mm, itemsep=0pt, topsep=0pt, parsep=0pt, label={\textbullet}]
-  \item \small Innovated an ANPR system using Python and OpenCV, achieving a 95\% accuracy in extracting Indian vehicle registration numbers
-  \item \small Bolstered image preprocessing  that improved image clarity by 20\%, ensuring accurate detection
-\end{itemize}
-\vspace{-\parsep} % Reduce space between itemize environments
-\end{itemize}
-
-\vspace{-1\topsep} % Reduce the space between title and items by half of \topsep
-\vspace{-0.1\topsep} % Reduce the space between title and items by half of \topsep
-
-
-\begin{itemize}[leftmargin=0mm, label={}, itemsep=0pt]
-\item \href{https://github.com/rm1738/Autonomous_Tractor}{\textbf{Autonomous-Tractor}} \hfill {January 2023 -- May 2023} \\
-\vspace{0\topsep} % Reduce the space between title and items by half of \topsep
-\vspace{-\partopsep} % Reduce additional space added above and below the list
-\vspace{-\baselineskip} % Reduce by one line height
-\begin{itemize}[leftmargin=5mm, itemsep=0pt, topsep=0pt, parsep=0pt, label={\textbullet}]
-  \item \small  Constructed an autonomous tractor interfaced using an Arduino, 5+ sensors and an optimized MPU6050 Gyroscope for course correction and reliable navigational accuracy
-  \item \small Deployed a PyGame GUI using BLE (Bluetooth Low Energy) for real-time sensor data, boosting operational efficiency by 25\%
-\end{itemize}
-\vspace{-\parsep} % Reduce space between itemize environments
-\end{itemize}
-
-\vspace{-0.5\topsep} % Reduce the space between title and items by half of \topsep
-
-\begin{itemize}[leftmargin=0mm, label={}, itemsep=0pt]
-\item \href{https://github.com/rm1738/Classifcation_of_Music_Genre/tree/main}{\textbf{Music Genre Classification Project}} \hfill {October 2022 -- December 2022} \\
-\vspace{0\topsep} % Reduce the space between title and items by half of \topsep
-\vspace{-\partopsep} % Reduce additional space added above and below the list
-\vspace{-\baselineskip} % Reduce by one line height
-\begin{itemize}[leftmargin=5mm, itemsep=0pt, topsep=0pt, parsep=0pt, label={\textbullet}]
-  \item \small Trained and tested K-Nearest Neighbors and SVM algorithms to classify music genres using the "GTZAN Dataset"
-  \item \small Created and fine-tuned Python scripts for data preprocessing and performance evaluation, achieving improvement in model accuracy and  reduction in processing time.
-\end{itemize}
-\vspace{-\parsep} % Reduce space between itemize environments
-\end{itemize}
-
-
-\begin{itemize}[leftmargin=0mm, label={}, itemsep=0pt]
-  \item \href{https://github.com/rm1738/Space-Invaders-/blob/main/proj2_main.c}{\textbf{Embedded Space Invaders Game Development}} \hfill {March 2021 -- April 2021} \\
-  \vspace{0\topsep} % Reduce the space between title and items by half of \topsep
-  \vspace{-\partopsep} % Reduce additional space added above and below the list
-  \vspace{-\baselineskip} % Reduce by one line height
+  \item \href{https://github.com/rm1738/Indian_Plate_Recognition/blob/main/annotated-DIP_Final_Report_Rahul_Menon.pdf}{\textbf{Automated Recognition of Indian Vehicle Number Plates}} \hfill \textit{\small October 2023 -- December 2023} \vspace{-0.3\baselineskip} % Reduced space between title and description
   \begin{itemize}[leftmargin=5mm, itemsep=0pt, topsep=0pt, parsep=0pt, label={\textbullet}]
-    \item Developed "Space Invaders" game using MSP432 microcontroller and joystick/button peripherals, showcasing advanced skills in embedded systems and game development
-    \item Engineered comprehensive player controls, enemy AI, and screen transitions using HAL libraries, ensuring smooth gameplay and user engagement
+    \item \small Innovated an ANPR system using Python and OpenCV, achieving a 95\% accuracy in extracting Indian vehicle registration numbers
+    \item \small Bolstered image preprocessing, improving image clarity by 20\%, ensuring accurate detection of plates in various conditions
   \end{itemize}
-  \vspace{-\parsep} % Reduce space between itemize environments
+
+  \item \href{https://github.com/rm1738/Autonomous_Tractor}{\textbf{Autonomous Tractor}} \hfill \textit{\small January 2023 -- May 2023} \vspace{-0.3\baselineskip} % Reduced space between title and description
+  \begin{itemize}[leftmargin=5mm, itemsep=0pt, topsep=0pt, parsep=0pt, label={\textbullet}]
+    \item \small Constructed an autonomous tractor interfaced using an Arduino, 5+ sensors and an optimized MPU6050 Gyroscope for course correction and reliable navigational accuracy
+    \item \small Deployed a PyGame GUI using BLE (Bluetooth Low Energy) for real-time sensor data, boosting operational efficiency by 25\%
+  \end{itemize}
 \end{itemize}
 
+% Reduce space between sections manually
+\vspace{-0.75\baselineskip} % Reduce by one line height
 
+% Technical Skills section
 \section{Technical Skills}
-\begin{itemize}[leftmargin=0mm, label={}, itemsep=-3pt] % Adjust itemsep as needed
+\begin{itemize}[leftmargin=0mm, label={}, itemsep=-2pt]  % Further tightened itemsep for compact spacing
   \small
-    \item \textbf{Programming Languages:} Java, Python, C/C++, SQL, MATLAB, MIPS Assembly
-    \item \textbf{Software Technologies:} Git Version Control, VS Code, PyCharm, IntelliJ, Eclipse, Code Composer Studio, , Arduino IDE
-    \item \textbf{Low-level Technologies:} Verilog, Assembly Programming (MIPS), Arduino, Raspberry Pi, Intel Quartus
-    \item \textbf{Libraries:} pandas, BLEAK, scikit-learn, Keras, Arduino Libraries, PyTorch, TensorFlow, PyGUI, Numpy
+    \item \textbf{Languages \& Technologies:} Python, C++, C#, SQL, Java, JavaScript, MATLAB, MIPS Assembly, Verilog, HTML, CSS
+    \item \textbf{Software \& Tools:} Git, Docker, Maven, VS Code, PyCharm, IntelliJ, Eclipse, Arduino IDE, Intel Quartus
+    \item \textbf{Web, Databases \& Frameworks:} React.js, Node.js, Express.js, MongoDB
+    \item \textbf{Data Science \& ML:} TensorFlow, Keras, PyTorch, scikit-learn, pandas, Numpy
+    \item \textbf{Hardware \& Embedded:} Arduino, Raspberry Pi, MODBUS, OCPP, Assembly (MIPS)
 \end{itemize}
 
 
